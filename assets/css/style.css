@@ -1,0 +1,215 @@
+html,
+body {
+  overflow-x: hidden !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+:root {
+    
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+a:active,
+a:focus,
+a:hover,
+button:active {
+  text-decoration: none;
+  outline: 0;
+  color: var(--thm-color);
+}
+
+a {
+  color: var(--black-col);
+}
+
+a:hover {
+  transition: all 0.5s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 23px 0;
+}
+
+h3 {
+  font-size: 1.67rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 50px 0;
+  position: relative;
+  clear: both;
+  scroll-behavior: smooth !important;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+    
+}
+
+
+.btn-secondary:hover {
+    
+}
+
+.btn-primary {
+    
+}
+
+
+
+.error {
+  color: red;
+}
+
+
+.form-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 50px;
+  background: linear-gradient(to right, #f7981d, #7a4900);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+}
+
+section {
+  padding: 50px 0;
+  position: relative;
+  clear: both;
+  scroll-behavior: smooth !important;
+}
+
+.active::after {
+  background: none repeat scroll 0 0 transparent;
+  display: block;
+  height: 2px;
+  margin-top: 10px;
+  background: blue;
+  width: 100% !important;
+}
+
+.navbar {
+  background-color: transparent;
+  position: fixed;
+  width: 100% !important;
+  top: 0;
+  z-index: 9;
+  transition: all 0.5s linear;
+}
+
+.navbar-brand>img {
+  width: 250px !important;
+}
+
+
+
+.hero,
+.hero2 {
+  padding-top: 130px !important;
+}
+
+.navbar .btn {
+  min-width: fit-content !important;
+}
+
+.scrolled {
+  background-color: rgba(40, 40, 40, 0.9) !important;
+  animation: navChange;
+}
+
+@keyframes navChange {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: rgba(40, 40, 40, 0.9);
+  }
+}
+
+.nav-item {
+  color: var(--secondary-col-rgba) !important;
+  transition: all 0.3s ease 0s, left 0.3s ease 0s;
+  min-width: fit-content;
+}
+
+.active {
+  font-weight: bold;
+  color: white !important;
+}
+
+.nav-item:hover {
+  color: white !important;
+}
+
+.nav-item::after {
+  background: none repeat scroll 0 0 transparent;
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 10px;
+  background: var(--gradient2);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-toggler {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  color: white !important;
+}
+
+.navbar-bg-dark {
+  background-color: rgb(78, 78, 78) !important;
+}
