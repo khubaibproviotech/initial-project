@@ -7,7 +7,6 @@ body {
 }
 
 :root {
-    
 }
 
 li,
@@ -82,24 +81,17 @@ section {
 }
 
 .btn {
-    
 }
 
-
 .btn-secondary:hover {
-    
 }
 
 .btn-primary {
-    
 }
-
-
 
 .error {
   color: red;
 }
-
 
 .form-btn::before {
   content: "";
@@ -142,11 +134,9 @@ section {
   transition: all 0.5s linear;
 }
 
-.navbar-brand>img {
+.navbar-brand > img {
   width: 250px !important;
 }
-
-
 
 .hero,
 .hero2 {
@@ -212,4 +202,95 @@ section {
 
 .navbar-bg-dark {
   background-color: rgb(78, 78, 78) !important;
+}
+
+.generic-modal button.is-close-btn {
+  position: absolute !important;
+  right: 15px !important;
+  top: 15px !important;
+  width: 50px;
+  height: 50px;
+  line-height: 16px;
+  border-radius: 100%;
+  outline: 0;
+  box-shadow: none;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 1;
+  padding: 5px;
+  font-size: 18px !important;
+  background-color: transparent !important;
+  color: #000 !important;
+  font-weight: bold;
+}
+
+.generic-modal {
+  width: 50%;
+  background: var(--primary-light);
+  border-radius: 0;
+  border: none;
+  color: black;
+  padding: 0px;
+  position: relative;
+  z-index: 1;
+
+  .form-control {
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    border: solid 1px #a6a6a6;
+  }
+
+  label {
+    margin-bottom: 10px;
+
+    a {
+      color: var(--dark-blue) !important;
+    }
+  }
+}
+
+.generic-modal .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px !important;
+  align-items: center;
+  width: 100% !important;
+}
+
+.generic-modal .form-wrapper input,
+.generic-modal .form-wrapper textarea,
+.generic-modal .form-wrapper select {
+  min-width: 350px !important;
+  height: 40px !important;
+  color: black !important;
+  background-color: white !important;
+  border: 1px solid #e2e2e2 !important;
+  outline: none;
+  padding: 8px;
+  border-radius: 50px !important;
+  margin: 0px;
+}
+
+.generic-modal input::placeholder,
+.generic-modal textarea::placeholder {
+  color: black;
+}
+
+.generic-modal p {
+  font-size: 14px;
+}
+
+.generic-modal .btns {
+  justify-content: center !important;
+}
+
+.generic-modal .btn-primary,
+.generic-modal .btn {
+  border-radius: 50px !important;
+  padding: auto 40px !important;
+}
+
+#dialog-content {
+  display: none;
 }

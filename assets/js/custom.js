@@ -1,32 +1,30 @@
-
-const nav = document.querySelector(".navbar")
+const nav = document.querySelector(".navbar");
 
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 100) {
-    nav.classList.add("scrolled")
+    nav.classList.add("scrolled");
   } else {
-    nav.style.animation = "navChange"
-    nav.classList.remove("scrolled")
+    nav.style.animation = "navChange";
+    nav.classList.remove("scrolled");
   }
-})
+});
 
-
-if (document.querySelector('.swiperClass')) {
+if (document.querySelector(".swiperClass")) {
   var portfolioSlider = new Swiper(".swiperClass", {
     spaceBetween: 50,
-    direction: 'horizontal',
+    direction: "horizontal",
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
     loop: true,
     breakpoints: {
-      320: { slidesPerView: 1},
-      576: { slidesPerView: 1},
-      768: { slidesPerView: 3},
-      992: { slidesPerView: 4},
+      320: { slidesPerView: 1 },
+      576: { slidesPerView: 1 },
+      768: { slidesPerView: 3 },
+      992: { slidesPerView: 4 },
       1200: { slidesPerView: 5 },
-    }
+    },
   });
 }
 
@@ -55,3 +53,24 @@ if (document.querySelector('.swiperClass')) {
 //     }
 //   });
 // };
+
+const showModal = () => {
+  Fancybox.show([
+    {
+      src: "#dialog-content",
+      type: "inline",
+    },
+  ]);
+};
+
+document.querySelectorAll(".trigger").forEach((button) => {
+  button.addEventListener("click", showModal);
+});
+
+setTimeout(showModal, 5000);
+
+document.addEventListener("DOMContentLoaded", function () {
+  Fancybox.bind("[data-fancybox]", {
+    // Your options here, if any
+  });
+});
